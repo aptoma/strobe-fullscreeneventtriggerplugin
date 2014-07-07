@@ -34,3 +34,4 @@ If you want to just work in a folder directly on the root of your webserver you 
     cp -r bin-debug/*  /var/www/FullscreenEventTriggerPlugin/
     
 
+NB: If you are working on a development server you may need to set up [ssh-agent-forwarding](https://developer.github.com/guides/using-ssh-agent-forwarding/)
