@@ -6,7 +6,7 @@ A Strobe/OSMF plugin that registers a callback function for listening to fullscr
 
 ####How to integrate it with Strobe - OSMF 
     
-    see: [index.template.html 
+see: [index.template.html 
 example](http://github.com/aptoma/strobe-fullscreeneventtrigger/blob/master/html-template/index.template.html "example")    
 
 ####Building the plugin with mxmlc
