@@ -23,4 +23,14 @@ allready there.
     cp html-template/StrobeMediaPlayback.swf bin-debug/
     cp html-template/crossdomain.xml bin-debug/
     cp html-template/index.template.html bin-debug/index.html
+    
+You need to edit the html file and replace http://localhost/FullscreenEventTriggerPlugin with the name of the vhost
+
+If you want to just work in a folder directly on the root of your webserver you can do this:
+
+    # Assumming /var/www is the root of your webserver
+    sudo mkdir -p /var/www/FullscreenEventTriggerPlugin
+    sudo chmod -r 644 /var/www/FullscreenEventTriggerPlugin
+    cp -r bin-debug/*  /var/www/FullscreenEventTriggerPlugin/
+    
 
