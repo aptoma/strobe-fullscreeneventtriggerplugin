@@ -22,5 +22,5 @@ allready there.
 
     cp html-template/StrobeMediaPlayback.swf bin-debug/
     cp html-template/crossdomain.xml bin-debug/
-    cp html-template/index.template.html bin-debug/FullscreenEventTriggerPlugin.html
+    cp html-template/index.template.html bin-debug/index.html
 
