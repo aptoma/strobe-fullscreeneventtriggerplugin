@@ -15,7 +15,7 @@ Download and install flex installer (ubuntu only) https://github.com/johansyd/fl
 
 From the root directory of this repository. Do the following from the terminal:
 
-    mxmlc -library-path+=lib -source-path src/ -output bin-debug/FullscreenEventTriggerPlugin.swf src//FullscreenEventTriggerPlugin.as
+    mxmlc src/FullscreenEventTriggerPlugin.as -library-path+=libs -sp="src/" -static-link-runtime-shared-libraries=true -o bin-debug/FullscreenEventTriggerPlugin.swf
 
 For testing you can set up a vhost and point it to the bin-debug folder. Copy the following files to the bin-debug folder if not 
 allready there.
