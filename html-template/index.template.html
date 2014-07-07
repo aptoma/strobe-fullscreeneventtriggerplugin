@@ -19,14 +19,13 @@
             <script type="text/javascript" src="http://aftonbladet-play.videodata.drvideo.aptoma.no/staging/js/all/"></script>
 
             <script type="text/javascript">
-                DrVideo._customer.swfPath = 'http://localhost/FullscreenEventTriggerPlugin/';
-                DrVideo._customer.strobeFilename = 'StrobeMediaPlayback.swf';
-
+                
                 //the new controlbar
                 DrVideo._customer.strobeOverloadFunctions.push(function(vars, pos){
+                    DrVideo._customer.swfPath = 'http://localhost/FullscreenEventTriggerPlugin/';
+                    DrVideo._customer.strobeFilename = 'StrobeMediaPlayback.swf';
                     vars.plugin_FullscreenTrigger = 'http://localhost/FullscreenEventTriggerPlugin/FullscreenEventTriggerPlugin.swf';
-                    vars.FullscreenTrigger_callback = 'callback';
-                    delete vars.plugin_CBarPlugin;
+                    vars.FullscreenTrigger_callback = 'callback'
                     vars.controlBarMode = 'docked';
                 });
 
