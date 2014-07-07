@@ -3,6 +3,7 @@ Strobe fullscreen event trigger
 
 A Strobe/OSMF plugin that registers a callback function for listening to fullscreen event from javascript
 
+NB: If you are working on a development server you may need to set up [ssh-agent-forwarding](https://developer.github.com/guides/using-ssh-agent-forwarding/)
 
 ####How to integrate it with Strobe - OSMF 
     
@@ -33,5 +34,3 @@ If you want to just work in a folder directly on the root of your webserver you 
     sudo chmod -r 644 /var/www/FullscreenEventTriggerPlugin
     cp -r bin-debug/*  /var/www/FullscreenEventTriggerPlugin/
     
-
-NB: If you are working on a development server you may need to set up [ssh-agent-forwarding](https://developer.github.com/guides/using-ssh-agent-forwarding/)
