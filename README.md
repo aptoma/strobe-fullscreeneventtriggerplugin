@@ -19,6 +19,7 @@ From the root directory of this repository. Do the following from the terminal:
 
 For testing you can set up a vhost and point it to the bin-debug folder. Copy the following files to the bin-debug folder if not 
 allready there.
+
     cp html-template/StrobeMediaPlayback.swf bin-debug/
     cp html-template/crossdomain.xml bin-debug/
     cp html-template/index.template.html bin-debug/FullscreenEventTriggerPlugin.html
