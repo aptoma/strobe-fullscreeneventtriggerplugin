@@ -167,5 +167,3 @@ package no.aptoma.drvideo
 		}
 	}
 }
-import no.aptoma.drvideo;
-
