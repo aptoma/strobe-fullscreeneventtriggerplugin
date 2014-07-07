@@ -1,0 +1,45 @@
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">                     
+                <style type="text/css">
+                        * {
+                                margin: 0;
+                                padding: 0;
+                        }
+                        #parent {
+                                width: 640px;
+                                height: 360px;
+                                border: 1px solid black;
+                                background-color: pink;
+                        }
+                </style>
+        </head>
+        <body>
+            <div id="parent"></div>
+            <script type="text/javascript" src="http://aftonbladet-play.videodata.drvideo.aptoma.no/staging/js/all/"></script>
+
+            <script type="text/javascript">
+                DrVideo._customer.swfPath = 'http://localhost/FullscreenEventTriggerPlugin/';
+                DrVideo._customer.strobeFilename = 'StrobeMediaPlayback.swf';
+
+                //the new controlbar
+                DrVideo._customer.strobeOverloadFunctions.push(function(vars, pos){
+                    vars.plugin_FullscreenTrigger = 'http://localhost/FullscreenEventTriggerPlugin/FullscreenEventTriggerPlugin.swf';
+                    vars.FullscreenTrigger_callback = 'callback';
+                    delete vars.plugin_CBarPlugin;
+                    vars.controlBarMode = 'docked';
+                });
+
+
+                function callback(id,method,data) {
+                    console.log(('id:' id + ', method:' + method + ', data:' + data);
+                };
+
+                var options = {
+                    'autoplay': true
+                };
+
+                DrVideo.API.play('50bcc97acdcd85df52000100', 'parent', options);
+            </script>
+        </body>
+</html>
