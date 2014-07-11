@@ -12,7 +12,7 @@ example](http://github.com/aptoma/strobe-fullscreeneventtrigger/blob/master/html
 
 ####Building the plugin with mxmlc
 
-Download and install flex installer (ubuntu only) https://github.com/johansyd/flex-installer
+Download and install flex installer (ubuntu only, see [Flex installer README](https://github.com/johansyd/flex-installer) for how to install flex on Mac OSX and Windows) https://github.com/johansyd/flex-installer
 
 From the root directory of this repository. Do the following from the terminal:
 
