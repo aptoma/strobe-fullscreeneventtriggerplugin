@@ -25,7 +25,7 @@ allready there.
     cp html-template/crossdomain.xml bin-debug/
     cp html-template/index.template.html bin-debug/index.html
     
-You need to edit the html file and replace http://localhost/FullscreenEventTriggerPlugin with the name of the vhost
+You need to edit the html file and replace the domain name localhost with the name of your vhost
 
 If you want to just work in a folder directly on the root of your webserver you can do this:
 
