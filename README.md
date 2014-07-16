@@ -5,7 +5,7 @@ A Strobe/OSMF plugin that registers a callback function for listening to fullscr
 
 NB: If you are working on a development server you may need to set up [ssh-agent-forwarding](https://developer.github.com/guides/using-ssh-agent-forwarding/)
 
-####How to integrate it with Strobe - OSMF 
+####How to integrate it with the DrVideo JSAPI
     
 see: [index.template.html 
 example](http://github.com/aptoma/strobe-fullscreeneventtrigger/blob/master/html-template/index.template.html "example")    
