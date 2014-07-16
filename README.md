@@ -34,3 +34,6 @@ If you want to just work in a folder directly on the root of your webserver you 
     mkdir /var/www/FullscreenEventTriggerPlugin
     cp -r bin-debug/*  /var/www/FullscreenEventTriggerPlugin/
     
+####Documentation
+
+More documentation can be found at the [DrVideo wiki](https://sites.google.com/a/aptoma.com/drvideo/home/software-components/common/osmf "OSMF/StrobeMediaPlayback")
