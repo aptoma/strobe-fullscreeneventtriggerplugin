@@ -33,7 +33,19 @@ If you want to just work in a folder directly on the root of your webserver you 
     sudo su
     mkdir /var/www/FullscreenEventTriggerPlugin
     cp -r bin-debug/*  /var/www/FullscreenEventTriggerPlugin/
+
+####Debugging
+
+If you want firebug style debugging you can do the following:
+
+    import console;
+    console.log("Hello Foxy lady");
+    console.error("Hello Foxy lady");
     
+This will call make calls to firebug.
+
+I have mentinoned some possibilities in the [flex installer README](https://github.com/aptoma/flex-installer "Flex installer") if you want other powertools.
+
 ####Documentation
 
 More documentation can be found at the [DrVideo wiki](https://sites.google.com/a/aptoma.com/drvideo/home/software-components/common/osmf "OSMF/StrobeMediaPlayback")
