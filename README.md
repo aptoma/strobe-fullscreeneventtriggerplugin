@@ -45,8 +45,6 @@ If you want firebug/chrome style debugging you can do the following:
     console.error("Hello Foxy lady");
     # creates a javascript alert box (does not require firebug or chrome)
     console.alert("Hello Foxy lady");
-    
-This will call make calls to firebug.
 
 I have mentinoned some possibilities in the [flex installer README](https://github.com/aptoma/flex-installer "Flex installer") if you want other powertools.
 
