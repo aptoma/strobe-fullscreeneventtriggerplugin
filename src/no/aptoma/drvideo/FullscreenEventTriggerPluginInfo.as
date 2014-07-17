@@ -22,7 +22,7 @@ package no.aptoma.drvideo
 	{
 		
 		public static var FULLSCREEN_BITRATE_LIMITER:String = 
-			"http://drvideo.aptoma.no/fullscreenbitratelimiter";
+			"http://drvideo.aptoma.no/fullscreeneventtrigger";
 		private var javascriptCallback:String;
 		private var settings:Object;
 		
@@ -40,7 +40,6 @@ package no.aptoma.drvideo
 			);
 			items.push(item);
 			this.settings = new Object();
-			trace('FullscreenBitrateLimiterPluginInfo is beeing constructed');
 			super(items, creationNotificationFunction);
 		}
 		
@@ -49,7 +48,6 @@ package no.aptoma.drvideo
 		 */
 		private function canHandleResourceFunction(resource:MediaResourceBase):Boolean
 		{
-			trace('FullscreenBitrateLimiterPluginInfo  can handle this resource');
 			var urlResource:URLResource = resource as URLResource;
 			if (urlResource == null) {
 				return false;
@@ -59,7 +57,6 @@ package no.aptoma.drvideo
 		
 		private function mediaElementCreationFunction():MediaElement
 		{
-			trace('FullscreenBitrateLimiterPluginInfo :mediaElementCreationFunction called.');
 			return new VideoElement;
 		}
 		
@@ -98,7 +95,6 @@ package no.aptoma.drvideo
 				var displayable:DisplayObject = trait.displayObject;
 				displayable.addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 				event.target.removeEventListener(MediaElementEvent.TRAIT_ADD, registerForAddedToStageEvent);
-				trace('FullscreenBitrateLimiterPluginInfo :The display object trait was added.');
 			}
 		}
 		
@@ -130,17 +126,14 @@ package no.aptoma.drvideo
 			displayable.stage.addEventListener(
 				FullScreenEvent.FULL_SCREEN, onFullScreen
 			);
-			trace('FullscreenBitrateLimiterPluginInfo : Registered for fullscreen events.');
 			event.target.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		}
 		
 		private function onFullScreen(event:FullScreenEvent):void
 		{
 			if (event.fullScreen) {
-				trace('FullscreenBitrateLimiterPluginInfo :in fullscreen:{callback:'+this.javascriptCallback+',id:'+ExternalInterface.objectID+',fullscreen:true');
 				call([this.javascriptCallback, ExternalInterface.objectID, "fullscreen", true]);
 			} else {
-				trace('FullscreenBitrateLimiterPluginInfo :out of fullscreen:{callback:'+this.javascriptCallback+',id:'+ExternalInterface.objectID+',fullscreen:false');
 				call([this.javascriptCallback, ExternalInterface.objectID, "fullscreen", false]);
 			}
 		}
@@ -155,7 +148,6 @@ package no.aptoma.drvideo
 					{
 						asyncTimer.removeEventListener(TimerEvent.TIMER, arguments.callee);
 						ExternalInterface.call.apply(ExternalInterface, args);
-						trace('FullscreenBitrateLimiterPluginInfo :the javascript call was succesfully made.');
 					}
 				);	
 				asyncTimer.start();
