@@ -151,11 +151,9 @@ package no.aptoma.drvideo
 					}
 				);	
 				asyncTimer.start();
+				return;
 			}
-			else
-			{
-				ExternalInterface.call.apply(ExternalInterface, args);
-			}
+			ExternalInterface.call.apply(ExternalInterface, args);
 		}
 	}
 }
