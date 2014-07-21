@@ -38,7 +38,6 @@ If you want to just work in a folder directly on the root of your webserver you 
 
 If you want firebug/chrome style debugging you can do the following:
 
-    import console;
     # Calls console.log
     console.log("Hello Foxy lady");
     # calls console.error
