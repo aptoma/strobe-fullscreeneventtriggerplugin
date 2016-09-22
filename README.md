@@ -5,14 +5,9 @@ A Strobe/OSMF plugin that registers a callback function for listening to fullscr
 
 NB: If you are working on a development server you may need to set up [ssh-agent-forwarding](https://developer.github.com/guides/using-ssh-agent-forwarding/)
 
-####How to integrate it with the DrVideo JSAPI
-    
-see: [index.template.html 
-example](http://github.com/aptoma/strobe-fullscreeneventtrigger/blob/master/html-template/index.template.html "example")    
-
 ####Building the plugin with mxmlc
 
-Download and install flex with the [flex installer](https://github.com/aptoma/flex-installer "Flex installer") (ubuntu only, see [Flex installer README](https://github.com/aptoma/flex-installer) for how to install flex on Mac OSX and Windows)
+Download and install flex with the [flex installer](https://github.com/johansyd/flex-installer "Flex installer") (ubuntu only, see [Flex installer README](https://github.com/aptoma/flex-installer) for how to install flex on Mac OSX and Windows)
 
 From the root directory of this repository. Do the following from the terminal:
 
@@ -23,9 +18,8 @@ allready there.
 
     cp html-template/StrobeMediaPlayback.swf bin-debug/
     cp html-template/crossdomain.xml bin-debug/
-    cp html-template/index.template.html bin-debug/index.html
     
-You need to edit the html file and replace the domain name localhost with the name of your vhost
+You need to setup a html file see [Using plug-ins](http://help.adobe.com/en_US/FMPSMP/Dev/WS3fd35e178bb08cb33ccc1b6f129f146edb7-7fff.html) for more information on how to add the strobe-fullscreeneventtriggerplugin to strobe. Add the html file to bin-debug
 
 If you want to just work in a folder directly on the root of your webserver you can do this:
 
@@ -33,6 +27,7 @@ If you want to just work in a folder directly on the root of your webserver you 
     sudo su
     mkdir /var/www/FullscreenEventTriggerPlugin
     cp -r bin-debug/*  /var/www/FullscreenEventTriggerPlugin/
+    # Add a html file with an object tag like [this](http://help.adobe.com/en_US/FMPSMP/Dev/WS3fd35e178bb08cb33ccc1b6f129f146edb7-7fff.html) 
 
 ####Debugging
 
@@ -45,8 +40,8 @@ If you want firebug/chrome style debugging you can do the following:
     # creates a javascript alert box (does not require firebug or chrome)
     console.alert("Hello Foxy lady");
 
-I have mentinoned some possibilities in the [flex installer README](https://github.com/aptoma/flex-installer "Flex installer") if you want other powertools.
+I have mentinoned some possibilities in the [flex installer README](https://github.com/johansyd/flex-installer "Flex installer") if you want other tools.
 
 ####Documentation
 
-More documentation can be found at the [DrVideo wiki](https://sites.google.com/a/aptoma.com/drvideo/home/software-components/common/osmf "OSMF/StrobeMediaPlayback")
+More documentation can be found at the [help adobe](http://help.adobe.com/en_US/FMPSMP/Dev/index.html "OSMF/StrobeMediaPlayback")
